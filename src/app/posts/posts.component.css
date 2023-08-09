@@ -1,0 +1,204 @@
+.user-section{
+    display: flex;
+    flex-direction: column;
+    padding: 10px !important;
+}
+
+.one-element{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.user-name{
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.user-section-title{
+    margin-bottom: 30px;
+}
+
+.border-right{
+    border-left: 1px solid grey;
+}
+
+
+.card-btn{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.posts-section{
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+   
+    background-color: #e8edf5;
+    border: 1ps solid #b4c4df;
+    height: 100%; 
+}
+
+ .margin-card{
+     margin-bottom: 35px;
+ }
+.post-creation .container-fluid {
+    background-color: #e8edf5;
+}
+
+ .post-creation .msg-form {
+    background-color: white;
+    padding: 20px
+}
+
+ .post-creation .pad-icon {
+    padding-top: 50px;
+    padding-left: 20px
+}
+
+ .post-creation .pad-icon a {
+    text-decoration: none;
+    margin-right: 40px
+}
+
+ .post-creation .input-group input:focus {
+    border: 1px solid blue
+}
+
+ .post-creation .pad-icon a:active {
+    height: 30px;
+    width: 30px;
+   
+    border-radius: 100%
+}
+
+ .post-creation .links {
+    padding-top: 50px;
+    width: 50%
+}
+
+ .post-creation #bordering a:active {
+    border: 1px solid #0080ff
+}
+
+@media(min-width:568px) {
+    .post-creation  .container-fluid {
+        margin: 100px 30px;
+        width: 96%;
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+}
+
+@media(max-width:567px) {
+    .post-creation .container-fluid {
+        margin: 10px 10px;
+        width: 94%;
+        padding-top: 20px;
+        padding-bottom: 20px
+    }
+
+    .post-creation .pad {
+        padding-top: 20px
+    }
+}
+
+.header-section{
+    background-image: url(../images/cta-bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+
+  height: 400px !important;
+}
+.btn-like{
+    background-color: transparent;
+    border: 1px solid #0080ff;
+    border-radius: 10px;
+    color: #0080ff;
+    font-weight: 600;
+}
+.card-user-section{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+.btn-abonner{
+    background-color: transparent;
+    border: 1px solid hsl(308, 100%, 59%);
+    border-radius: 10px;
+    color: hsl(308, 100%, 59%);
+    font-weight: 600;
+    margin-left: 20px;
+}
+.btn-delete{
+    background-color: transparent;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: red;
+    font-weight: 600;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.btn-update{
+    background-color: transparent;
+    border: 1px solid #0080ff;
+    border-radius: 10px;
+    color: #0080ff;
+    font-weight: 600;
+    padding: 5px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+.btn-disLike{
+    background-color: #0080ff;
+    border: 1px solid #0080ff;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+ 
+.card-footer{
+    margin: 20px;
+}
+
+.comment{
+    padding: 10px;
+    font-weight: 500;
+}
+.card-footer-title{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.input-comment{
+    border: none !important;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #dcdee1   ;
+}
+
+.supp-section{
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: end;
+}
+
+.abon-btn{
+    cursor: pointer;
+    
+}
+.abon-btn a{
+     text-decoration: none !important;
+    
+}
+
+.section-comment{
+    margin-top: -52px !important;
+}

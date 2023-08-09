@@ -1,0 +1,156 @@
+<!-- <div class="container" style="margin-top: 165px;">
+  <header class="jumbotron">
+    <p>{{ content }}</p>
+  </header>
+</div> -->
+
+
+
+<div class="row" style="margin-top: 150px;" >
+  <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 ">
+
+
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 posts-section"> 
+
+    <div class="post-creation">
+
+      <button type="button" class="btn btn-primary text-white" style="margin: 20px;" (click)="goToCreatePost()" >Creation du publication</button>
+
+
+
+    </div>
+
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2"> 
+  
+  </div>
+  
+</div>
+
+<section class="mt-5">
+  <div class="container">
+    <div class="col-md-12 font-weight-bold">
+      <div class="text-darkgreen " style="font-size: 30px;" >
+        Liste des publications
+      </div>
+  
+    </div>
+    <div class="col-md-12 font-weight-bold">
+      <div class="text-darkgreen " style="align-items: flex-end;"  >
+        <div class="form__group field">
+          <input type="input" class="form__field" placeholder="Rechercher avec titre du publication" name="name" id='name' [(ngModel)]="searchBytitle"  (ngModelChange)="filterArray()"  />
+          <label for="name" class="form__label">Rechercher avec titre du publication</label>
+        </div>
+ 
+      </div>
+  
+    </div>
+    <div class="row mt-3 pb-5 mx-0" >
+      <div *ngFor="let item of afterFilter"  class="col-md-6 col-lg-4 col-xl-3 col-12 mt-4">
+        <div class="card shadow border-0 click" >
+          <img class="card-img-top" style="height: 165px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcNRLIy_9LExHSQ2kAouyqOlkx6no6Q35IAA&usqp=CAU"   alt="Card image cap" />
+          <div class="col-md-6 col-6 card-price">
+            <div class="row priceCard " >
+         
+            </div>
+            <div  class="row priceCard">
+              <div class="col-md-5 col-5 w-100 bg-danger px-0 text-center invisible strikethrough">
+                <div class="font-16 text-light z-index-n1 font-weight-bold red-price pt-1">96</div>
+                <div class=" font-10 text-light mt-n2">TND</div>
+              </div>
+ 
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="row mt-n4 height">
+              <div class="col-md-3 col-3 mt-n2">
+                <div >
+  
+                </div>
+                <div  >
+ 
+                </div>
+              </div>
+      
+              <div placement="bottom" ngbTooltip="Feedback" class="col-md-4 col-4 pt-3 font-12 text-right pr-2 ml-auto pl-0">
+                <span >
+                  <!-- <fa-icon [icon]="faStar" class="text-warning size"></fa-icon> -->
+                </span>
+                <span >
+                  <!-- <fa-icon [icon]="faStar" class="text-muted size"></fa-icon> -->
+                </span>
+              </div>
+              <div class="col-md-12">
+                <hr />
+              </div>
+            </div>
+            <div class="row pb-3 mx-0">
+              <div class="col-12 px-0" >
+                <div  class="row">
+                  <div class="col-1">
+         
+                  </div>
+                  <div class="col-8">
+                    <div class="text-lightgreen font-18 font-weight-bold  ">
+                      {{item.title}} 
+                    </div>
+                    <div class="font-10 mt-n3 pt-1 text-muted">
+                      <div class=" ">
+                   
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 px-0 customTooltip" >
+                <div   class="row ">
+              
+                  <div class="col-12 mt-3">
+                    <div class="text-span-4 font-10   ">
+                      {{item.description}}
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 px-0 customTooltip" >
+                <div   class="row ">
+              
+                  <div class="col-6 mt-3">
+                    <div class="text-span-4 font-10   ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill" viewBox="0 0 16 16">
+                        <path d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a9.84 9.84 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733.058.119.103.242.138.363.077.27.113.567.113.856 0 .289-.036.586-.113.856-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.163 3.163 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.82 4.82 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z"/>
+                      </svg>   {{item.likings.length}}
+                    </div>
+                  
+                  </div>
+                  <div class="col-6 mt-3">
+                    <div class="text-span-4 font-10   ">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                      </svg>  {{item.views}}
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+
+            <div class="mt-1 scale">
+              <button   type="button"  (click)="goToPostDetail(item.id)" class="btn btn-success w-100 font-18">
+                <div class="mt-n1">
+                  Détails publication
+                </div>
+              </button>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
